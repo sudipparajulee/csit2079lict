@@ -1,0 +1,18 @@
+.myheading{
+    color: blue;
+    background-color: yellow;
+}
+
+#heading123{
+    color: red;
+    background-color: blue;
+}
+
+.mybtn{
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid green;
+}

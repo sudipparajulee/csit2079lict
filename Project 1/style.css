@@ -1,0 +1,216 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+.topbar{
+    background-color: rgb(50, 50, 183);
+    color: white;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar p{
+    margin: 5px;
+}
+
+.go-to-top{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.go-to-top a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 8px rgb(210, 205, 205);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.navbar img{
+    height: 60px;
+}
+
+.menu{
+    list-style-type: none;   
+}
+
+.menu li{
+    display: inline;
+    padding: 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.course-section{
+    padding: 50px 100px;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2, .section-title p{
+    margin: 5px;
+}
+
+.course-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.course{
+    background-color: rgb(242, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgb(210, 205, 205);
+}
+
+.myform{
+    width: 40%;
+    margin: 50px auto;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.input-group{
+    margin: 10px 0;
+}
+
+.input-group input{
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(229, 226, 226);
+}
+
+.myform button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(0, 0, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+.mytable{
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.mytable th, .mytable td{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.mytable th{
+    background-color: rgb(116, 116, 195);
+    color: white;
+}
+
+.mytable tr:nth-child(even){
+    background-color: rgb(235, 237, 238);
+}
+
+.mytable tr:hover{
+    background-color: rgb(112, 112, 142);
+    color: white;
+}
+
+.product-section{
+    padding: 50px 100px;
+}
+
+.product-section h2, .product-section > p{
+    text-align: center;
+    margin: 5px;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.product{
+    padding: 10px;
+    background-color: rgb(242, 244, 245);
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgb(210, 205, 205);
+    position: relative;
+}
+
+.product span{
+    text-decoration: line-through;
+}
+
+.product img{
+    width: 100%;
+    border-radius: 5px;
+    height: 300px;
+}
+
+.discount{
+    background-color: blue;
+    color: white;
+    padding: 2px 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 180px;
+    background-color: aliceblue;
+    display: none;
+
+}
+
+.dropdown-menu a{
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-menu a:hover{
+    background-color: rgb(116, 116, 195);
+    color: white;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
