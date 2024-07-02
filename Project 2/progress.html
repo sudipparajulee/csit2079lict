@@ -24,7 +24,50 @@
 </head>
 <body>
     <div class="progress-bar">
-        <div class="progress">40%</div>
+        <div class="progress" id="progress">40%</div>
     </div>
+    <h2 id="clock"></h2>
+
+    <script>
+        var count = 0;
+        var progress = document.getElementById("progress");
+        var total = 40;
+        var interval = setInterval(progressfn,50);
+        function progressfn()
+        {
+            count++;
+            progress.innerHTML = count + "%";
+            progress.style.width = count + "%";
+            if(count == total)
+            {
+                clearInterval(interval);
+            }
+        }
+
+
+        //for clock
+        function clock()
+        {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var time = hours + ":" + check(minutes) + ":" + check(seconds);
+            document.getElementById("clock").innerHTML = time;
+        }
+        clock();
+        setInterval(clock, 1000);
+        function check(x)
+        {
+            if(x<10)
+            {
+                return "0" + x;
+            }
+            else
+            {
+                return x;
+            }
+        }
+    </script>
 </body>
 </html>
