@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
     <div class="flex justify-between bg-blue-600 text-white py-2 px-10">
@@ -12,7 +16,7 @@
         <div>Email: info@gmail.com</div>
     </div>
 
-    <nav class="flex justify-between items-center shadow-md bg-white px-10">
+    <nav class="md:flex hidden justify-between items-center shadow-md bg-white px-10">
         <img src="https://bitmapitsolution.com/images/logo/logo.png" alt="" class="h-20">
         <div>
             <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="index.html">Home</a>
@@ -23,7 +27,21 @@
         </div>
     </nav>
 
-    <div class="grid grid-cols-3 gap-10 px-24 mt-10">
+    <nav class="md:hidden block px-2 shadow-md bg-white sticky top-0">
+        <div class="flex justify-between items-center">
+            <img src="https://bitmapitsolution.com/images/logo/logo.png" alt="" class="h-14">
+            <i class="ri-menu-line text-lg border px-2 rounded-lg" onclick="mobilemenu()"></i>
+        </div>
+        <div class="hidden absolute top-14 right-0 left-0 bg-white" id="mobile-menu">
+            <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="index.html">Home</a>
+            <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="">About</a>
+            <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="">Contact</a>
+            <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="">Services</a>
+            <a class="p-2 text-gray-700 hover:text-blue-700 hover:font-bold transition-all" href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <div class="grid md:grid-cols-3 md:gap-10 gap-5 md:px-24 px-5 mt-10">
         <div class="bg-gray-200 p-4 rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105 duration-500 cursor-pointer">
             <h2 class="font-bold text-xl">Service Title</h2>
             <p>This is a description</p>
@@ -40,5 +58,18 @@
         </div>
     </div>
 
+
+    <script>
+        function mobilemenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('grid')) {
+                menu.classList.add('hidden');
+                menu.classList.remove('grid');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('grid');
+            }
+        }
+    </script>
 </body>
 </html>
