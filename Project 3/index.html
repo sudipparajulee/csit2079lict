@@ -9,6 +9,13 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="flex justify-between bg-blue-600 text-white py-2 px-10">
@@ -41,9 +48,36 @@
         </div>
     </nav>
 
+
+    <!-- Slider main container -->
+<div class="swiper w-full h-[500px]">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="https://mmatnepal.com/public/packages/VbSBYex4qLjU48HITyxb.jpg" alt="" class="w-full h-[500px] object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://mmatnepal.com/public/packages/VbSBYex4qLjU48HITyxb.jpg" alt="" class="w-full h-[500px] object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://mmatnepal.com/public/packages/VbSBYex4qLjU48HITyxb.jpg" alt="" class="w-full h-[500px] object-cover">
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
     <div class="flex">
         <p class="bg-red-700 text-white px-16 py-4 text-xl ">Notice</p>
-        <marquee behavior="" direction="" class="flex-1 py-4 bg-gray-200 font-bold text-lg">The campus will remain closed due to excessive rainfall.</marquee>
+        <marquee behavior="" direction="" class="flex-1 py-4 bg-gray-200 font-bold text-lg" onmouseenter="this.stop()" onmouseout="this.start()">The campus will remain closed due to excessive rainfall.</marquee>
     </div>
 
 
@@ -77,5 +111,35 @@
             }
         }
     </script>
+
+
+<script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
 </body>
 </html>
